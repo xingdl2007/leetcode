@@ -3,7 +3,8 @@
 #include <map>
 using namespace std;
 
-#include "lengthoflongestsubstring.cc"
+//#include "lengthoflongestsubstring.cc"
+#include "lengthoflongestsubstring_s1.cc"
 
 /*
  * consider the corner case
