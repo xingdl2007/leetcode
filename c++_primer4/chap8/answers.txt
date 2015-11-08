@@ -1,0 +1,10 @@
+8.1 put the 'Goodbye!' in the output buffer; if os is an 'ifstream' object, it will be wrong.
+
+8.2 ostream& print(ostream& os);
+
+8.5 EOF or some error
+
+8.11 actually this may have little difference with the experiment output, when 
+     close() a ifstream object, there seems no need to clear() it any more
+
+8.12 if close() failed, open() will failed too, then 'in' is invalid
