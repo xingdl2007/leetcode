@@ -1,6 +1,6 @@
 /*
  * c++ primer 4nd ed; chapter10 associate container
- * pair, map, set, multimap, multiset
+ * pair, map
  * 10.17 ~ 10.20
  */
 /*
