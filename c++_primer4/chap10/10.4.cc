@@ -58,7 +58,7 @@ set<TextQuery::line_no> TextQuery::run_query(string& s) const{
 string TextQuery::text_line(line_no ln) const{
   // method from leveldb
   //assert(ln < lines_of_texts.size());
-  if(ln < lines_of_texts.size())
+  if(ln <= lines_of_texts.size())
     return lines_of_texts[ln];
   else
     // or another method: more c++
@@ -72,11 +72,12 @@ void TextQuery::store_file(ifstream& infile) {
 
 void TextQuery::build_map() {
   string line,word;
-  line_no ln = 1, size = lines_of_texts.size();
-  while(ln++ < size) {
-    line = lines_of_texts[ln-1];
+  line_no ln = 0, size = lines_of_texts.size();
+  while(ln < size) {
+    line = lines_of_texts[ln];
     stringstream word_line(line);
     while(word_line >> word)  word_map[word].insert(ln);
+    ln++;
   }
 }
 
@@ -97,7 +98,7 @@ void print_result(const set<TextQuery::line_no>& locs,
        << size << " time(s)" << endl;
 
   line_nums::const_iterator it = locs.begin();
-  for(; it!=locs.end();++it) {
+  for(; it!=locs.end(); ++it) {
     cout << "\t(line "
          << (*it) + 1 << ") "
          << file.text_line(*it) << endl;
