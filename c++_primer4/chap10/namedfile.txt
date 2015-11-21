@@ -1,0 +1,8 @@
+Introduction to algorithms
+2nd ed.
+Preface
+This book provides a comprehensive introduction to the modern study of computer 
+algorithms. It presents many algorithms and covers them in considerable depth, 
+yet makes their design and analysis accessible to all levels of readers. We have
+tried to keep explanations elementary without sacrificing depth of coverage or
+mathematical rigor.
