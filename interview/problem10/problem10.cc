@@ -1,5 +1,5 @@
 /*
- * sword to offer: problem 9
+ * sword to offer: problem 10
  * bit operation
  */
 #include "gtest/gtest.h"
