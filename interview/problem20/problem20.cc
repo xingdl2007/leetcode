@@ -8,7 +8,6 @@
 
 #include "gtest/gtest.h"
 
-
 // normal print
 void print(int **matrix, int row, int col) {
   int i,j;
@@ -72,7 +71,6 @@ TEST(MATRIX,BASIC) {
   
   // pointer array: int**
   int* matrix[] = {row0,row1,row2,row3};
-  
   // m : int (*)[4] to int**
   // a pointer to an array of 4 ints
   // c++ primer 4 p123(p142 english)
