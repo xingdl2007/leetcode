@@ -1,5 +1,5 @@
 /*
- * sword to offer: problem 19
+ * sword to offer: problem 20
  * matrix print
  */
 
@@ -31,6 +31,7 @@ void print2(int (*matrix)[4], int row, int col) {
 }
 
 // clockwise: start is useless
+// seems not the best, little code repeat
 void matrixprint(int **matrix, int row, int col, int start) {
   int row_s, row_e; int i;
   int col_s, col_e;
