@@ -2,10 +2,6 @@
  * sword to offer: problem 24
  */
 
-#include <iostream>
-#include <algorithm>
-#include <deque>
-
 #include "gtest/gtest.h"
 
 bool treeCheck(int *array, int length)
