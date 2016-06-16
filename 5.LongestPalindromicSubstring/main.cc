@@ -3,7 +3,7 @@
 
 using namespace std;
 
-#include "longestpalindromicsubstring.cc"
+#include "longestpalindromicsubstring_n2.cc"
 
 int main()
 {

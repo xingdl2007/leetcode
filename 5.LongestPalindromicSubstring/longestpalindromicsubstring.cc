@@ -12,7 +12,7 @@ class Solution{
 		for(end = last+1; end < s.end(); ++end) {
 			// find the turn, first check pre then check last
 			// corner case, cover all the same char
-			// bug: for 'lplooooor'
+			// bug: for 'lplooooor', seems not enough
 			if(*start == *end && *start == *last) {
 				half = 0;
 			}
