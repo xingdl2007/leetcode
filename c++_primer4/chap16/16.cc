@@ -23,9 +23,29 @@ int main(int argc, char*argv[]) {
 
     vector<int> vec(b,b+4);
 
+    // range ctor test
     Queue<int> q(a,a+4);
-    cout << q << endl;
+    cout << "Q:" << q << endl;
 
+    // default ctor and push/pop test
+    Queue<int> t;
+    t.push(5);
+    t.push(6);
+    t.push(7);
+    t.push(8);
+    t.pop();
+    t.push(20);
+    cout << "T:" << t << endl;
+
+    // assign template function test
     q.assign(vec.begin(),vec.end());
-    cout << q << endl;
+    cout << "Q:" << q << endl;
+
+    // test copy ctor
+    Queue<int> temp(q);
+    cout << "temp:" << temp << endl;
+
+    // assignemnt operator test
+    temp = t;
+    cout << "temp:" << temp << endl;    
 }

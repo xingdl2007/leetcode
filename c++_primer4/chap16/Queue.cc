@@ -3,11 +3,12 @@
 // for whole defination see Queue.h
 
 template<class Type>
-Queue<Type>& Queue<Type>::operator=(const Queue& q) {
+Queue<Type>& Queue<Type>::operator=(const Queue<Type>& q) {
     if(this != &q) {
         destroy();
         copy_elems(q);
     }
+    return *this;
 }
 
 template <class Type> 
