@@ -1,4 +1,0 @@
-echo "count-size" && ./count-size <data/fox_story
-echo "directcall" && ./directcall <data/add_item
-
-../noinput absInt fcnobj subscript use_chckPtr
