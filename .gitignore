@@ -4,7 +4,6 @@
 .vscode
 *#*
 .#
-interview/InterviewQuestions
 *.swp
-interview
 *.out
+*.class
