@@ -76,9 +76,6 @@ public class LengthOfLongestSubstring {
         System.out.println(s.lengthOfLongestSubstring("abcabcbb"));
         System.out.println(s.lengthOfLongestSubstring("bbbbb"));
         System.out.println(s.lengthOfLongestSubstring("pwwkew"));
-<<<<<<<HEAD
         System.out.println(s.lengthOfLongestSubstring("cabcde"));
-=======
->>>>>>>6 be3f004fe8f7538b1d1fc09aa15cd9ab4213c65
     }
 }
