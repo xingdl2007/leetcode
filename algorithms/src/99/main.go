@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"strings"
+	"math"
 )
 
 /**
@@ -21,7 +22,7 @@ type TreeNode struct {
 }
 
 // first: implement the O(n) straight forward method
-// 52ms, 30%
+// 42ms, 76.92%
 func recoverTree(root *TreeNode) {
 	var nodes []*TreeNode
 
@@ -52,14 +53,43 @@ func recoverTree(root *TreeNode) {
 	}
 
 	// swap m,n node's Val
-	tmp := nodes[m].Val
-	nodes[m].Val = nodes[n].Val
-	nodes[n].Val = tmp
+	nodes[m].Val, nodes[n].Val = nodes[n].Val, nodes[m].Val
 }
 
-// then it do better
-func recoverTree2(root *TreeNode) {
+// ref
+var firstElement *TreeNode = nil
+var secondElement *TreeNode = nil
+var preElementVal *TreeNode = &TreeNode{Val: math.MinInt32}
 
+func recoverTree2(root *TreeNode) {
+	if nil == root {
+		return
+	}
+	firstElement = nil
+	secondElement = nil
+	preElementVal = &TreeNode{Val: math.MinInt32}
+
+	TraceTree(root)
+
+	fmt.Println(firstElement.Val, secondElement.Val)
+	firstElement.Val, secondElement.Val = secondElement.Val, firstElement.Val
+}
+
+func TraceTree(root *TreeNode) {
+	if nil == root {
+		return
+	}
+	TraceTree(root.Left)
+
+	if nil == firstElement && preElementVal.Val >= root.Val {
+		firstElement = preElementVal
+	}
+	if nil != firstElement && preElementVal.Val >= root.Val {
+		secondElement = root
+	}
+	preElementVal = root
+
+	TraceTree(root.Right)
 }
 
 func (root *TreeNode) String() string {
@@ -82,11 +112,13 @@ func (root *TreeNode) String() string {
 
 func main() {
 	tree1 := &TreeNode{2, &TreeNode{3, nil, nil}, &TreeNode{1, nil, nil}}
-	recoverTree(tree1)
+	recoverTree2(tree1)
 	fmt.Println(tree1)
 
 	tree4 := &TreeNode{10, &TreeNode{5, nil, nil}, &TreeNode{15, &TreeNode{6, nil, nil},
 		&TreeNode{20, nil, nil}}}
+	fmt.Println(tree4)
 	recoverTree(tree4)
 	fmt.Println(tree4)
+
 }
