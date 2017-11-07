@@ -15,20 +15,28 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-// error-prone
-// 12ms, 78.38%
-// [] 0: false
-func hasPathSum(root *TreeNode, sum int) bool {
+func compare(x, y int) int {
+	if x == 0 {
+		return y
+	} else if y == 0 {
+		return x
+	}
+
+	if x < y {
+		return x
+	}
+	return y
+}
+
+func minDepth(root *TreeNode) int {
 	if root == nil {
-		return false
+		return 0
+	}
+	if root.Left == nil && root.Right == nil {
+		return 1
 	}
 
-	// must be leaf node
-	if root.Val == sum && root.Left == nil && root.Right == nil {
-		return true
-	}
-
-	return hasPathSum(root.Left, sum-root.Val) || hasPathSum(root.Right, sum-root.Val)
+	return compare(minDepth(root.Left), minDepth(root.Right)) + 1
 }
 
 func main() {
@@ -36,10 +44,10 @@ func main() {
 		&TreeNode{0,
 			&TreeNode{-1, nil, nil}, nil},
 		&TreeNode{2, nil, nil}}
-	fmt.Println(hasPathSum(tree1, 3))
+	fmt.Println(minDepth(tree1))
 
 	tree2 := &TreeNode{1, &TreeNode{2, nil, nil}, nil}
-	fmt.Println(hasPathSum(tree2, 1))
+	fmt.Println(minDepth(tree2))
 
-	fmt.Println(hasPathSum(nil, 0))
+	fmt.Println(minDepth(nil))
 }
