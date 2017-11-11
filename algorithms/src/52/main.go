@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Runtime: 3 ms, 42.86%
 func totalNQueens(n int) int {
 	res := make([]int, n, n)
 	var count int
@@ -9,7 +10,7 @@ func totalNQueens(n int) int {
 		res[i] = -1
 	}
 
-	for k := 0; k >= 0; k-- {
+	for k := 0; k >= 0; {
 		// find one solution
 		for k != n && k >= 0 {
 			res[k]++
@@ -26,6 +27,11 @@ func totalNQueens(n int) int {
 		// construct solutions
 		if k == n {
 			count++
+
+			// minor optimization
+			res[k-1] = -1
+			// restart start from last but one
+			k -= 2
 		}
 	}
 	return count
