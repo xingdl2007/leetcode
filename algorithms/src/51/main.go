@@ -59,6 +59,7 @@ func solution(n []int) (ret []string) {
 	return
 }
 
+// Runtime: 12 ms, 91.67%
 func solveNQueens(n int) [][]string {
 	res := make([]int, n, n)
 	var ret [][]string
@@ -66,7 +67,7 @@ func solveNQueens(n int) [][]string {
 		res[i] = -1
 	}
 
-	for k := 0; k >= 0; k-- {
+	for k := 0; k >= 0; {
 		// find one solution
 		for k != n && k >= 0 {
 			res[k]++
@@ -83,6 +84,11 @@ func solveNQueens(n int) [][]string {
 		// construct solutions
 		if k == n {
 			ret = append(ret, solution(res))
+
+			// minor optimization
+			res[k-1] = -1
+			// restart start from last but one
+			k -= 2
 		}
 	}
 	return ret
