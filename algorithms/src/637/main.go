@@ -24,7 +24,8 @@ type TreeNode struct {
 	Right *TreeNode
 }
 
-func pingPong(ping, pong *[]*TreeNode) (level []int) {
+func pingPong(ping, pong *[]*TreeNode) (average float64) {
+	var level []int
 	for _, node := range *ping {
 		level = append(level, node.Val)
 		if node.Left != nil {
@@ -36,7 +37,13 @@ func pingPong(ping, pong *[]*TreeNode) (level []int) {
 	}
 	// clear element
 	*ping = (*ping)[:0]
-	return level
+
+	var sum float64
+	for _, v := range level {
+		sum += float64(v)
+	}
+
+	return sum / float64(len(level))
 }
 
 func averageOfLevels(root *TreeNode) []float64 {
@@ -44,33 +51,24 @@ func averageOfLevels(root *TreeNode) []float64 {
 		return nil
 	}
 
-	var res [][]int
+	var res []float64
 	var ping, pong []*TreeNode
 	// put root in ping buf, kick it start
 	ping = append(ping, root)
 	isPing := true
 	for len(ping) > 0 || len(pong) > 0 {
-		var level []int
+		var average float64
 		if isPing {
 			isPing = false
-			level = pingPong(&ping, &pong)
+			average = pingPong(&ping, &pong)
 		} else {
 			isPing = true
-			level = pingPong(&pong, &ping)
+			average = pingPong(&pong, &ping)
 		}
-		res = append(res, level)
+		res = append(res, average)
 	}
 
-	// calculate average
-	var ret []float64
-	for _, l := range res {
-		var sum float64
-		for _, v := range l {
-			sum += float64(v)
-		}
-		ret = append(ret, float64(sum/float64(len(l))))
-	}
-	return ret
+	return res
 }
 
 func main() {
