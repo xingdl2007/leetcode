@@ -33,25 +33,10 @@ public class Solution142 {
             return null;
         }
 
-        int count = 1;
-        p1 = p1.next.next;
-        p2 = p2.next;
-        while (p1 != p2) {
-            count++;
-            p1 = p1.next.next;
-            p2 = p2.next;
-        }
-
-        p1 = head.next;
         p2 = head;
-        count--;
         while (p1 != p2) {
-            p1 = p1.next;
-            if (count == 0) {
-                p2 = p2.next;
-            } else {
-                count--;
-            }
+           p1 = p1.next;
+           p2 = p2.next;
         }
         return p1;
     }
