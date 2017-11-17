@@ -38,7 +38,7 @@ func judgeSquareSum2(c int) bool {
 	if c < 0 {
 		return false
 	}
-	root := int(math.Sqrt(float64(c))) + 1
+	root := int(math.Sqrt(float64(c)))
 	low, high := 0, root
 	for low <= high {
 		cur := low*low + high*high
