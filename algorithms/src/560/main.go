@@ -31,16 +31,37 @@ func subarraySum(nums []int, k int) int {
 }
 
 // map based
+// ref: https://leetcode.com/articles/subarray-sum-equals-k/
+// method 4, impressive!
+
+// Approach #4 Using hashmap [Accepted]
+//
+// Algorithm
+//
+// The idea behind this approach is as follows: If the cumulative sum(represented by sum[i] for sum up to i ​th index)
+// up to two indices is the same, the sum of the elements lying in between those indices is zero. Extending the same
+// thought further, if the cumulative sum up to two indices, say i and j is at a difference of k i.e.
+// if sum[i] - sum[j] = k , the sum of elements lying between indices i and j is k.
+//
+// Based on these thoughts, we make use of a hash map which is used to store the cumulative sum upto all the
+// indices possible along with the number of times the same sum occurs. We store the data in the form:
+// (sum_i, no. of occurrences of sum_i).
+//
+// We traverse over the array num and keep on finding the cumulative sum.
+// Every time we encounter a new sum, we make a new entry in the hash map corresponding to that sum.
+// If the same sum occurs again, we increment the count corresponding to that sum in the hash map.
+// Further, for every sum encountered, we also determine the number of times the sum sum-k has
+// occurred already, since it will determine the number of times a sub array with sum kk has occurred up to the
+// current index. We increment the count by the same amount.
+//
+//After the complete array has been traversed, the count gives the required result.
 func subarraySum2(nums []int, k int) int {
 	var count, sum int
 	record := make(map[int]int)
-	record[0] = 1
 	for _, n := range nums {
-		sum += n
-		if v, ok := record[sum-k]; ok {
-			count += v
-		}
 		record[sum]++
+		sum += n
+		count += record[sum-k]
 	}
 	return count
 }
