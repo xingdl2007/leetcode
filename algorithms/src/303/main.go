@@ -38,6 +38,32 @@ func (this *NumArray) SumRange(i int, j int) int {
  * param_1 := obj.SumRange(i,j);
  */
 
+// slice is better
+/*
+
+type NumArray struct {
+   sums []int
+}
+
+
+func Constructor(nums []int) NumArray {
+   this := NumArray{}
+   this.sums = make([]int, len(nums)+1)
+   s := 0
+   for i := 0; i < len(nums); i++ {
+	   s += nums[i]
+	   this.sums[i+1] = s
+   }
+   return this
+}
+
+
+func (this *NumArray) SumRange(i int, j int) int {
+   return this.sums[j+1] - this.sums[i]
+}
+
+ */
+
 func main() {
 	num := Constructor([]int{-2, 0, 3, -5, 2, -1})
 	fmt.Println(num.SumRange(0, 2))
