@@ -43,6 +43,29 @@ func permute(nums []int) [][]int {
 	return ret
 }
 
+// backtracking
+// Runtime: 9ms, 84.83%
+func permute3(nums []int) [][]int {
+	var perm func([]int, int)
+	var res [][]int
+	perm = func(l []int, n int) {
+		// n == 0 make it can process nil slice
+		if n == 0 {
+			var tmp = make([]int, len(l))
+			copy(tmp, l)
+			res = append(res, tmp)
+			return
+		}
+		for i := 0; i < n; i++ {
+			l[n-1], l[i] = l[i], l[n-1]
+			perm(l, n-1)
+			l[n-1], l[i] = l[i], l[n-1]
+		}
+	}
+	perm(nums, len(nums))
+	return res
+}
+
 // a kind of LexicographicPermute: check
 // Introduction to The Design and Analysis of Algorithms 3ed, p.112
 func permute2(nums []int) [][]int {
@@ -67,20 +90,19 @@ func permute2(nums []int) [][]int {
 		}
 
 		sort.Ints(nums[pos:])
-		fmt.Printf("\t%d =>(after sorted) %v \n", pos, nums)
 		for i := pos; i < n; i++ {
 			if nums[i] > nums[pos-1] {
 				nums[i], nums[pos-1] = nums[pos-1], nums[i]
 				break
 			}
 		}
-
-		fmt.Println(nums)
 	}
 	return ans
 }
 
 func main() {
-	//fmt.Println(permute([]int{1, 2, 3}))
-	permute2([]int{1, 2, 3})
+	fmt.Println(permute([]int{1, 2, 3}))
+	fmt.Println(permute2([]int{1, 2, 3}))
+	fmt.Println(permute3([]int{1, 2, 3}))
+	fmt.Println(permute3([]int{}))
 }
