@@ -211,6 +211,40 @@ func main() {
 	//fmt.Println(findKthLargest(s2, 20))
 	//fmt.Println(s2)
 
-	fmt.Println(findKthLargest4(s, 2))
-	fmt.Println(findKthLargest4(s2, 20))
+	//fmt.Println(findKthLargest4(s, 2))
+	//fmt.Println(findKthLargest4(s2, 20))
+
+	fmt.Println(findKthLargest5(s, 2))
+	fmt.Println(findKthLargest5(s2, 20))
+}
+
+//----------------------------------------------------------
+// try another method based on QuickSelect
+//----------------------------------------------------------
+func LomutoPartition(a []int, l, r int) int {
+	s := l
+	for i := l + 1; i <= r; i++ {
+		if a[i] > a[l] {
+			s += 1
+			a[s], a[i] = a[i], a[s]
+		}
+	}
+	a[s], a[l] = a[l], a[s]
+	return s
+}
+
+func quickSelect(a []int, l, r, k int) int {
+	var s int
+	for s = LomutoPartition(a, l, r); s != k-1; {
+		if s > k-1 {
+			s = LomutoPartition(a, l, s-1)
+		} else {
+			s = LomutoPartition(a, s+1, r)
+		}
+	}
+	return a[s]
+}
+
+func findKthLargest5(nums []int, k int) int {
+	return quickSelect(nums, 0, len(nums)-1, k)
 }
