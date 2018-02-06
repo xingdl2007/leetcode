@@ -52,9 +52,9 @@ public class MedianOfTwoSortedArrays {
             int[] temp = A;
             A = B;
             B = temp;
-            int tmp = m;
+            int child = m;
             m = n;
-            n = tmp;
+            n = child;
         }
         int iMin = 0, iMax = m, halfLen = (m + n + 1) / 2;
         while (iMin <= iMax) {

@@ -83,7 +83,7 @@ public class LongestPalindromicSubstring {
                 else palindrome = s.substring(left - j, right + j + 1);
             }
 
-            //System.out.println("debug: " + tmp);
+            //System.out.println("debug: " + child);
             ret = (palindrome.length() > ret.length()) ? palindrome : ret;
         }
         return ret;
