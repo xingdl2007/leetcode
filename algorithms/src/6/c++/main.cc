@@ -3,7 +3,36 @@
 
 using namespace std;
 
-#include "zigzagconversion.cc"
+class Solution {
+public:
+  string convert(string s, int numRows) {
+    int mod = 2*numRows - 2;
+    string *rows[numRows];
+    string ret;
+
+    if (numRows == 1)
+      return s;
+
+    for (int i = 0; i < numRows; ++i) {
+      rows[i] = new string();
+    }
+
+    for (int i = 0; i < s.size(); ++i) {
+      int reminder = i%mod;
+      if (reminder >= numRows) {
+        rows[mod - reminder]->append(s, i, 1);
+      } else {
+        rows[reminder]->append(s, i, 1);
+      }
+    }
+
+    for (int i = 0; i < numRows; ++i) {
+      //cout << *rows[i] << endl;
+      ret += *rows[i];
+    }
+    return ret;
+  }
+};
 
 /* ZigZag examples
 
@@ -23,8 +52,8 @@ using namespace std;
     3           9           15
 */
 
-int main(int argc, char* argv[]) {
-    cout << (new Solution())->convert("PAYPALISHIRING",3) << endl;
-    cout << (new Solution())->convert("ABC",2) << endl;
-    return 0;
+int main(int argc, char *argv[]) {
+  cout << (new Solution())->convert("PAYPALISHIRING", 3) << endl;
+  cout << (new Solution())->convert("ABC", 2) << endl;
+  return 0;
 }
