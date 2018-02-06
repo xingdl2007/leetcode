@@ -55,6 +55,7 @@
 | 137 | [Single Number II](algorithms/137) | Medium |
 | 141 | [Linked List Cycle](algorithms/141) | Easy |
 | 142 | [Linked List Cycle II](algorithms/142) | Medium |
+| 146 | [LRU Cache](algorithms/146)| Hard |
 | 152 | [Maximum Product Subarray](algorithms/152) | Medium |
 | 160 | [Intersection of Two Linked Lists](algorithms/160) | Easy |
 | 168 | [Excel Sheet Column Title](algorithms/168) | Easy |
