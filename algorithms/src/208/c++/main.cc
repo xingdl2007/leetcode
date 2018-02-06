@@ -1,59 +1,101 @@
 #include <string>
 #include <iostream>
+#include <memory>
+
+/*
+ * Implement a trie with insert, search, and startsWith methods.
+ * Note: You may assume that all inputs are consist of lowercase letters a-z.
+ */
 
 using namespace std;
 
-class Solution {
+// Runtime: 92 ms, 10%
+class Trie {
+  struct Node {
+    shared_ptr<Node> links[26] = {nullptr};  // a-z, alphabet size, all initialize to nullptr
+    ssize_t value = -1;           // -1 means null
+  };
+
 public:
-  string convert(string s, int numRows) {
-    int mod = 2*numRows - 2;
-    string *rows[numRows];
-    string ret;
+  /** Initialize your data structure here. */
+  Trie() : root(make_shared<Node>()), size(0) {};
 
-    if (numRows == 1)
-      return s;
+  Trie(const Trie &) = delete;
+  Trie &operator=(const Trie &) = delete;
 
-    for (int i = 0; i < numRows; ++i) {
-      rows[i] = new string();
-    }
-
-    for (int i = 0; i < s.size(); ++i) {
-      int reminder = i%mod;
-      if (reminder >= numRows) {
-        rows[mod - reminder]->append(s, i, 1);
-      } else {
-        rows[reminder]->append(s, i, 1);
+  /** Inserts a word into the trie. */
+  void insert(string word) {
+    shared_ptr<Node> search = root;
+    for (auto c:word) {
+      auto idx = c - 'a';
+      if (search->links[idx] == nullptr) {
+        search->links[idx] = make_shared<Node>();
       }
+      search = search->links[idx];
     }
-
-    for (int i = 0; i < numRows; ++i) {
-      //cout << *rows[i] << endl;
-      ret += *rows[i];
-    }
-    return ret;
+    search->value = size++;
   }
+
+  /** Returns if the word is in the trie. */
+  bool search(string word) {
+    shared_ptr<Node> search = root;
+    for (auto c:word) {
+      auto idx = c - 'a';
+      if (search->links[idx] == nullptr) {
+        return false;
+      }
+      search = search->links[idx];
+    }
+    return word.empty() || search->value != -1;
+  }
+
+  /** Returns if there is any word in the trie that starts with the given prefix. */
+  bool startsWith(string prefix) {
+    shared_ptr<Node> search = root;
+    for (auto c:prefix) {
+      auto idx = c - 'a';
+      if (search->links[idx] == nullptr) {
+        return false;
+      }
+      search = search->links[idx];
+    }
+    return true;
+  }
+private:
+  shared_ptr<Node> root;
+  size_t size;
 };
 
-/* ZigZag examples
-
-    2 line example:
-    0   2   4
-    1   3   5
-
-    3 line example:
-    0       4       8
-    1   3   5   7   9
-    2       6       10
-
-    4 line example:
-    0           6           12
-    1       5   7       11  13
-    2   4       8   10      14
-    3           9           15
-*/
+/**
+ * Your Trie object will be instantiated and called as such:
+ * Trie obj = new Trie();
+ * obj.insert(word);
+ * bool param_2 = obj.search(word);
+ * bool param_3 = obj.startsWith(prefix);
+ */
 
 int main(int argc, char *argv[]) {
-  cout << (new Solution())->convert("PAYPALISHIRING", 3) << endl;
-  cout << (new Solution())->convert("ABC", 2) << endl;
+  Trie trie;
+  trie.insert("she");
+  trie.insert("sells");
+  trie.insert("sea");
+  trie.insert("shells");
+  trie.insert("by");
+  trie.insert("the");
+  trie.insert("sea");
+  trie.insert("shore");
+
+  cout << (trie.search("") ? "true" : "false") << endl;
+  cout << (trie.search("she") ? "true" : "false") << endl;
+  cout << (trie.search("sells") ? "true" : "false") << endl;
+  cout << (trie.search("sea") ? "true" : "false") << endl;
+  cout << (trie.search("shells") ? "true" : "false") << endl;
+  cout << (trie.search("by") ? "true" : "false") << endl;
+  cout << (trie.search("the") ? "true" : "false") << endl;
+  cout << (trie.search("sea") ? "true" : "false") << endl;
+  cout << (trie.search("shore") ? "true" : "false") << endl;
+
+  cout << (trie.startsWith("shore") ? "true" : "false") << endl;
+  cout << (trie.startsWith("abc") ? "true" : "false") << endl;
   return 0;
 }
