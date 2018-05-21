@@ -15,7 +15,8 @@
 | 14  | [Longest Common Prefix](algorithms/14) | Easy |
 | 15  | [3Sum](algorithms/15) | Medium |
 | 16  | [3Sum Closest](algorithms/16) | Medium |
-| 17  | [17. Letter Combinations of a Phone Number](algorithms/17) | Medium |
+| 17  | [Letter Combinations of a Phone Number](algorithms/17) | Medium |
+| 22  | [Generate Parentheses](algorithms/22) | Medium |
 | 18  | [4Sum](algorithms/18) | Medium |
 | 23  | [Merge k Sorted Lists](algorithms/23) | Hard |
 | 26  | [Remove Duplicates from Sorted Array](algorithms/26) | Easy |
