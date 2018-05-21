@@ -9,6 +9,7 @@
 | 5   | [Longest Palindromic Substring](algorithms/5) | Medium |
 | 6   | [ZigZag Conversion](algorithms/6) | Medium |
 | 7   | [Reverse Integer](algorithms/7) | Easy |
+| 8   | [String to Integer (atoi)](algorithms/8) | Medium |
 | 11  | [Container With Most Water](algorithms/11) | Medium |
 | 15  | [3Sum](algorithms/15) | Medium |
 | 16  | [3Sum Closest](algorithms/16) | Medium |
