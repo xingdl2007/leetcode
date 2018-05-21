@@ -12,6 +12,7 @@
 | 8   | [String to Integer (atoi)](algorithms/8) | Medium |
 | 11  | [Container With Most Water](algorithms/11) | Medium |
 | 13  | [Roman to Integer](algorithms/13) | Easy |
+| 14  | [Longest Common Prefix](algorithms/14) | Easy |
 | 15  | [3Sum](algorithms/15) | Medium |
 | 16  | [3Sum Closest](algorithms/16) | Medium |
 | 18  | [4Sum](algorithms/18) | Medium |
