@@ -8,6 +8,7 @@
 | 4   | [Median of Two Sorted Arrays](algorithms/4) | Hard |
 | 5   | [Longest Palindromic Substring](algorithms/5) | Medium |
 | 6   | [ZigZag Conversion](algorithms/6) | Medium |
+| 7   | [Reverse Integer](algorithms/7) | Easy |
 | 11  | [Container With Most Water](algorithms/11) | Medium |
 | 15  | [3Sum](algorithms/15) | Medium |
 | 16  | [3Sum Closest](algorithms/16) | Medium |
@@ -69,6 +70,7 @@
 | 207 | [Course Schedule](algorithms/207) | Medium |
 | 208 | [Implement Trie (Prefix Tree)](algorithms/208) | Medium |
 | 210 | [Course Schedule II](algorithms/210) | Medium |
+| 212 | [Word Search II](algorithms/212) | Hard |
 | 215 | [Kth Largest Element in an Array](algorithms/215) | Medium |
 | 217 | [Contains Duplicate](algorithms/217) | Easy |
 | 221 | [Maximal Square](algorithms/221) | Medium |
