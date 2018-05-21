@@ -16,6 +16,7 @@
 | 15  | [3Sum](algorithms/15) | Medium |
 | 16  | [3Sum Closest](algorithms/16) | Medium |
 | 17  | [Letter Combinations of a Phone Number](algorithms/17) | Medium |
+| 20  | [Valid Parentheses](algorithms/20) | Easy |
 | 22  | [Generate Parentheses](algorithms/22) | Medium |
 | 18  | [4Sum](algorithms/18) | Medium |
 | 23  | [Merge k Sorted Lists](algorithms/23) | Hard |
