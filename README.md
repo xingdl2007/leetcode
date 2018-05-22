@@ -26,6 +26,7 @@
 | 27  | [Remove Element](algorithms/27) | Easy |
 | 28  | [Implement strStr()](algorithms/28) | Easy |
 | 31  | [Next Permutation](algorithms/31) | Medium |
+| 33  | [Search in Rotated Sorted Array](algorithms/33) | Medium |
 | 41  | [First Missing Positive](algorithms/41) | Hard |
 | 46  | [Permutations](algorithms/46) | Medium |
 | 47  | [Permutations II](algorithms/47) | Medium |
