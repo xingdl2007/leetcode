@@ -1,4 +1,5 @@
 PROJECT(leetcode CXX)
+set(CMAKE_CXX_STANDARD 14)
 
 add_subdirectory(1/c++)
 add_subdirectory(2/c++)
@@ -20,5 +21,6 @@ add_subdirectory(28/c++)
 add_subdirectory(33/c++)
 add_subdirectory(34/c++)
 add_subdirectory(36/c++)
+add_subdirectory(48/c++)
 add_subdirectory(146/c++)
 add_subdirectory(208/c++)
