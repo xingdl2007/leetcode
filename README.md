@@ -50,6 +50,7 @@
 | 69  | [Sqrt(x)](algorithms/69) | Easy |
 | 70  | [Climbing Stairs](algorithms/70) | Easy |
 | 73  | [Set Matrix Zeroes](algorithms/73) | Medium |
+| 75  | [Sort Colors](algorithms/75) | Medium |
 | 78  | [Subsets](algorithms/78) | Medium |
 | 89  | [Gray Code](algorithms/89) | Medium |
 | 90  | [Subsets II](algorithms/90) | Medium |
