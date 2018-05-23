@@ -39,6 +39,7 @@
 | 53  | [Maximum Subarray](algorithms/53) | Easy |
 | 54  | [Spiral Matrix](algorithms/54) | Medium |
 | 55  | [Jump Game](algorithms/55) | Medium |
+| 56  | [Merge Intervals](algorithms/56) | Medium |
 | 59  | [Spiral Matrix II](algorithms/59) | Medium |
 | 60  | [Permutation Sequence](algorithms/60) | Medium |
 | 62  | [Unique Paths](algorithms/62) | Medium |
