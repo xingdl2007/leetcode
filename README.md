@@ -33,6 +33,7 @@
 | 46  | [Permutations](algorithms/46) | Medium |
 | 47  | [Permutations II](algorithms/47) | Medium |
 | 48  | [Rotate Image](algorithms/48) | Medium |
+| 49  | [Group Anagrams](algorithms/49) | Medium |
 | 51  | [N-Queens](algorithms/51) | Hard |
 | 52  | [N-Queens II](algorithms/52) | Hard |
 | 53  | [Maximum Subarray](algorithms/53) | Easy |
