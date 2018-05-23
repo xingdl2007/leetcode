@@ -45,6 +45,7 @@
 | 62  | [Unique Paths](algorithms/62) | Medium |
 | 63  | [Unique Paths II](algorithms/63) | Medium |
 | 64  | [Minimum Path Sum](algorithms/64) | Medium |
+| 66  | [Plus One](algorithms/66) | Easy |
 | 70  | [Climbing Stairs](algorithms/70) | Easy |
 | 73  | [Set Matrix Zeroes](algorithms/73) | Medium |
 | 78  | [Subsets](algorithms/78) | Medium |
