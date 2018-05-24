@@ -52,6 +52,7 @@
 | 73  | [Set Matrix Zeroes](algorithms/73) | Medium |
 | 75  | [Sort Colors](algorithms/75) | Medium |
 | 78  | [Subsets](algorithms/78) | Medium |
+| 79  | [Word Search](algorithms/79) | Medium |
 | 89  | [Gray Code](algorithms/89) | Medium |
 | 90  | [Subsets II](algorithms/90) | Medium |
 | 98  | [Validate Binary Search Tree](algorithms/98) | Medium |
