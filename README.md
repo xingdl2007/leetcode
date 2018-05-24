@@ -56,6 +56,7 @@
 | 89  | [Gray Code](algorithms/89) | Medium |
 | 90  | [Subsets II](algorithms/90) | Medium |
 | 94  | [Binary Tree Inorder Traversal](algorithms/94) | Medium |
+| 96  | [Unique Binary Search Trees](algorithms/96) | Medium |
 | 98  | [Validate Binary Search Tree](algorithms/98) | Medium |
 | 99  | [Recover Binary Search Tree](algorithms/99) | Hard |
 | 100 | [Same Tree](algorithms/100) | Easy |
