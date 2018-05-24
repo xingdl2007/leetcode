@@ -78,6 +78,7 @@
 | 130 | [Surrounded Regions](algorithms/130) | Medium |
 | 136 | [Single Number](algorithms/136) | Easy |
 | 137 | [Single Number II](algorithms/137) | Medium |
+| 139 | [Word Break](algorithms/139) | Medium |
 | 141 | [Linked List Cycle](algorithms/141) | Easy |
 | 142 | [Linked List Cycle II](algorithms/142) | Medium |
 | 146 | [LRU Cache](algorithms/146)| Hard |
