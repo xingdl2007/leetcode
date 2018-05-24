@@ -71,6 +71,7 @@
 | 110 | [Balanced Binary Tree](algorithms/110) | Easy |
 | 111 | [Minimum Depth of Binary Tree](algorithms/111) | Easy |
 | 112 | [Path Sum](algorithms/112) | Easy |
+| 114 | [Flatten Binary Tree to Linked List](algorithms/114) | Medium |
 | 120 | [Triangle](algorithms/120) | Medium |
 | 121 | [Best Time to Buy and Sell Stock](algorithms/121) | Easy |
 | 128 | [Longest Consecutive Sequence](algorithms/128) | Hard |
