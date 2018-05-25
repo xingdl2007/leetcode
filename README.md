@@ -113,6 +113,7 @@
 | 283 | [Move Zeroes](algorithms/283) | Easy |
 | 287 | [Find the Duplicate Number](algorithms/287) | Medium |
 | 292 | [Nim Game](algorithms/292) | Easy |
+| 300 | [Longest Increasing Subsequence](algorithms/300) | Medium |
 | 303 | [Range Sum Query - Immutable](algorithms/303) | Easy |
 | 310 | [Minimum Height Trees](algorithms/310) | Medium |
 | 329 | [Longest Increasing Path in a Matrix](algorithms/329) | Medium |
