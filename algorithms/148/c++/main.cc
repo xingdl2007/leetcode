@@ -33,16 +33,34 @@ public:
     return merge(sortList(head), sortList(slow));
   }
 
+  // try with iterative version
   ListNode *merge(ListNode *lhs, ListNode *rhs) {
+    ListNode dummy(-1), *ptr = &dummy;
+    while (lhs && rhs) {
+      if (lhs->val < rhs->val) {
+        ptr->next = lhs;
+        lhs = lhs->next;
+      } else {
+        ptr->next = rhs;
+        rhs = rhs->next;
+      }
+      ptr = ptr->next;
+    }
+    ptr->next = rhs == nullptr ? lhs : rhs;
+    return dummy.next;
+  }
+
+  // recursive version is not fast enough
+  ListNode *merge2(ListNode *lhs, ListNode *rhs) {
     if (lhs == nullptr)
       return rhs;
     if (rhs == nullptr)
       return lhs;
     if (lhs->val <= rhs->val) {
-      lhs->next = merge(lhs->next, rhs);
+      lhs->next = merge2(lhs->next, rhs);
       return lhs;
     } else {
-      rhs->next = merge(lhs, rhs->next);
+      rhs->next = merge2(lhs, rhs->next);
       return rhs;
     }
   }
