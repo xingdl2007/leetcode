@@ -106,6 +106,7 @@
 | 234 | [Palindrome Linked List](algorithms/234) | Easy |
 | 236 | [Lowest Common Ancestor of a Binary Tree](algorithms/236) | Medium |
 | 238 | [Product of Array Except Self](algorithms/238) | Medium |
+| 240 | [Search a 2D Matrix II](algorithms/240) | Medium |
 | 260 | [Single Number III](algorithms/260) | Medium |
 | 268 | [Missing Number](algorithms/268) | Easy |
 | 283 | [Move Zeroes](algorithms/283) | Easy |
