@@ -18,12 +18,15 @@ public:
   int majorityElement(vector<int> &nums) {
     int count = 1, maj = nums[0];
     for (int i = 1; i < nums.size(); ++i) {
-      if (nums[i] == maj)
-        ++count;
-      else if (--count == 0) {
+      if (count == 0) {
         count = 1;
         maj = nums[i];
+        continue;
       }
+      if (nums[i] == maj)
+        ++count;
+      else
+        --count;
     }
     return maj;
   }

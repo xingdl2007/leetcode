@@ -87,6 +87,7 @@
 | 152 | [Maximum Product Subarray](algorithms/152) | Medium |
 | 160 | [Intersection of Two Linked Lists](algorithms/160) | Easy |
 | 168 | [Excel Sheet Column Title](algorithms/168) | Easy |
+| 169 | [Majority Element](algorithms/169) | Easy |
 | 171 | [Excel Sheet Column Number](algorithms/171) | Easy |
 | 191 | [Number of 1 Bits](algorithms/191) | Easy |
 | 198 | [House Robber](algorithms/198) | Easy |
@@ -104,6 +105,7 @@
 | 226 | [Invert Binary Tree](algorithms/226) | Easy |
 | 234 | [Palindrome Linked List](algorithms/234) | Easy |
 | 236 | [Lowest Common Ancestor of a Binary Tree](algorithms/236) | Medium |
+| 238 | [Product of Array Except Self](algorithms/238) | Medium |
 | 260 | [Single Number III](algorithms/260) | Medium |
 | 268 | [Missing Number](algorithms/268) | Easy |
 | 283 | [Move Zeroes](algorithms/283) | Easy |
