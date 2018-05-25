@@ -1,52 +1,50 @@
 #include <iostream>
 #include <vector>
-#include <stack>
+#include <map>
+#include <climits>
 #include <algorithm>
 
 using namespace std;
 
-// start from left bottom corner
+// key: filter out impossible check
 class Solution {
 public:
-  bool searchMatrix(vector<vector<int>> &matrix, int target) {
-    if (matrix.empty())
-      return false;
-    int m = matrix.size(), n = matrix[0].size();
-    int x = m - 1, y = 0;
-    while (0 <= x && y < n) {
-      if (matrix[x][y] == target)
-        return true;
-      else if (matrix[x][y] < target)
-        ++y;
-      else
-        --x;
+  int numSquares(int n) {
+    vector<int> nums(n + 1, 0);
+    for (int i = 1; i <= n; ++i) {
+      int step = n;
+      for (int j = 1; j*j <= i; ++j) {
+        step = min(step, nums[i - j*j] + 1);
+      }
+      nums[i] = step;
     }
-    return false;
+    return nums[n];
   }
 };
 
-auto print = [](const auto &array) {
-  for_each(begin(array), end(array), [](const auto &item) {
-    cout << item << " ";
-  });
-  cout << '\n';
-};
-
-auto print2D = [&](const auto &matrix) {
-  std::for_each(begin(matrix), end(matrix), print);
+// ref
+class Solution2 {
+public:
+  int numSquares(int n) {
+    static vector<int> dp{0};
+    while (dp.size() <= n) {
+      int squares = INT_MAX;
+      for (int i = 1; i*i <= dp.size(); i++)
+        squares = min(squares, dp[dp.size() - i*i] + 1);
+      dp.push_back(squares);
+    }
+    return dp[n];
+  }
 };
 
 int main(int argc, char *argv[]) {
   Solution so;
-  vector<vector<int>> data = {
-      {1, 4, 7, 11, 15},
-      {2, 5, 8, 12, 19},
-      {3, 6, 9, 16, 22},
-      {10, 13, 14, 17, 24},
-      {18, 21, 23, 26, 30}
-  };
-
-  cout << so.searchMatrix(data, 5) << '\n';
-  cout << so.searchMatrix(data, 20) << '\n';
+  cout << so.numSquares(1) << '\n';
+  cout << so.numSquares(2) << '\n';
+  cout << so.numSquares(3) << '\n';
+  cout << so.numSquares(4) << '\n';
+  cout << so.numSquares(12) << '\n';
+  cout << so.numSquares(13) << '\n';
+  cout << so.numSquares(6616) << '\n';
   return 0;
 }

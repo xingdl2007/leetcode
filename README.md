@@ -109,6 +109,7 @@
 | 240 | [Search a 2D Matrix II](algorithms/240) | Medium |
 | 260 | [Single Number III](algorithms/260) | Medium |
 | 268 | [Missing Number](algorithms/268) | Easy |
+| 279 | [Perfect Squares](algorithms/279) | Medium |
 | 283 | [Move Zeroes](algorithms/283) | Easy |
 | 287 | [Find the Duplicate Number](algorithms/287) | Medium |
 | 292 | [Nim Game](algorithms/292) | Easy |
