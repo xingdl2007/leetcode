@@ -131,6 +131,7 @@
 | 412 | [Fizz Buzz](algorithms/412) | Easy |
 | 414 | [Third Maximum Number](algorithms/414) | Easy |
 | 416 | [Partition Equal Subset Sum](algorithms/416) | Medium |
+| 437 | [Path Sum III](algorithms/437) | Easy |
 | 448 | [Find All Numbers Disappeared in an Array](algorithms/448) | Easy |
 | 450 | [Delete Node in a BST](algorithms/450) | Medium |
 | 461 | [Hamming Distance](algorithms/461) | Easy |
