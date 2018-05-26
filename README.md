@@ -136,6 +136,7 @@
 | 448 | [Find All Numbers Disappeared in an Array](algorithms/448) | Easy |
 | 450 | [Delete Node in a BST](algorithms/450) | Medium |
 | 461 | [Hamming Distance](algorithms/461) | Easy |
+| 494 | [Target Sum](algorithms/494) | Medium |
 | 523 | [Continuous Subarray Sum](algorithms/523) | Medium |
 | 547 | [Friend Circles](algorithms/547) | Medium |
 | 560 | [Subarray Sum Equals K](algorithms/560) | Medium |
