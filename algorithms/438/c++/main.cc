@@ -8,7 +8,7 @@
 using namespace std;
 
 // time limit exceeded
-class Solution {
+class Solution2 {
 public:
   vector<int> findAnagrams(string s, string p) {
     if (s.size() < p.size())
@@ -27,7 +27,7 @@ public:
 };
 
 // ref: sliding window
-class Solution2 {
+class Solution {
 public:
   vector<int> findAnagrams(string s, string p) {
     if (s.size() < p.size())
@@ -57,7 +57,7 @@ auto print = [](const auto &array) {
 };
 
 int main(int argc, char *argv[]) {
-  Solution2 so;
+  Solution so;
   print(so.findAnagrams("cbaebabacd", "abc"));
   print(so.findAnagrams("aaaaaaaaaaaaaaaaaaaaaaaa", "aa"));
   return 0;
