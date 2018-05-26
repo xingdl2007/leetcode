@@ -126,6 +126,8 @@
 | 371 | [Sum of Two Integers](algorithms/371) | Easy |
 | 384 | [Shuffle an Array](algorithms/384) | Medium |
 | 389 | [Find the Difference](algorithms/389) | Easy |
+| 394 | [Decode String](algorithms/394) | Medium |
+| 406 | [Queue Reconstruction by Height](algorithms/406) | Medium |
 | 412 | [Fizz Buzz](algorithms/412) | Easy |
 | 414 | [Third Maximum Number](algorithms/414) | Easy |
 | 416 | [Partition Equal Subset Sum](algorithms/416) | Medium |
