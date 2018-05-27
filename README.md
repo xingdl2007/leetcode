@@ -29,6 +29,7 @@
 | 33  | [Search in Rotated Sorted Array](algorithms/33) | Medium |
 | 34  | [Search for a Range](algorithms/34) | Medium |
 | 36  | [Valid Sudoku](algorithms/36) | Medium |
+| 39  | [Combination Sum](algorithms/39) | Medium |
 | 41  | [First Missing Positive](algorithms/41) | Hard |
 | 46  | [Permutations](algorithms/46) | Medium |
 | 47  | [Permutations II](algorithms/47) | Medium |
