@@ -139,6 +139,7 @@
 | 494 | [Target Sum](algorithms/494) | Medium |
 | 523 | [Continuous Subarray Sum](algorithms/523) | Medium |
 | 538 | [Convert BST to Greater Tree](algorithms/538) | Easy |
+| 543 | [Diameter of Binary Tree](algorithms/543) | Easy |
 | 547 | [Friend Circles](algorithms/547) | Medium |
 | 560 | [Subarray Sum Equals K](algorithms/560) | Medium |
 | 561 | [Array Partition I](algorithms/561) | Easy |
