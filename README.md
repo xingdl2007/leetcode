@@ -10,6 +10,7 @@
 | 6   | [ZigZag Conversion](algorithms/6) | Medium |
 | 7   | [Reverse Integer](algorithms/7) | Easy |
 | 8   | [String to Integer (atoi)](algorithms/8) | Medium |
+| 10  | [Regular Expression Matching](algorithms/10) | Hard |
 | 11  | [Container With Most Water](algorithms/11) | Medium |
 | 13  | [Roman to Integer](algorithms/13) | Easy |
 | 14  | [Longest Common Prefix](algorithms/14) | Easy |
@@ -26,11 +27,13 @@
 | 27  | [Remove Element](algorithms/27) | Easy |
 | 28  | [Implement strStr()](algorithms/28) | Easy |
 | 31  | [Next Permutation](algorithms/31) | Medium |
+| 32  | [Longest Valid Parentheses](algorithms/32) | Hard |
 | 33  | [Search in Rotated Sorted Array](algorithms/33) | Medium |
 | 34  | [Search for a Range](algorithms/34) | Medium |
 | 36  | [Valid Sudoku](algorithms/36) | Medium |
 | 39  | [Combination Sum](algorithms/39) | Medium |
 | 41  | [First Missing Positive](algorithms/41) | Hard |
+| 42  | [Trapping Rain Water](algorithms/42) | Hard |
 | 46  | [Permutations](algorithms/46) | Medium |
 | 47  | [Permutations II](algorithms/47) | Medium |
 | 48  | [Rotate Image](algorithms/48) | Medium |
