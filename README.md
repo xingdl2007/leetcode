@@ -53,6 +53,7 @@
 | 66  | [Plus One](algorithms/66) | Easy |
 | 69  | [Sqrt(x)](algorithms/69) | Easy |
 | 70  | [Climbing Stairs](algorithms/70) | Easy |
+| 72  | [Edit Distance](algorithms/72) | Hard |
 | 73  | [Set Matrix Zeroes](algorithms/73) | Medium |
 | 75  | [Sort Colors](algorithms/75) | Medium |
 | 78  | [Subsets](algorithms/78) | Medium |
@@ -121,6 +122,7 @@
 | 303 | [Range Sum Query - Immutable](algorithms/303) | Easy |
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](algorithms/309) | Medium |
 | 310 | [Minimum Height Trees](algorithms/310) | Medium |
+| 315 | [Count of Smaller Numbers After Self](algorithms/315) | Hard |
 | 322 | [Coin Change](algorithms/322) | Medium |
 | 329 | [Longest Increasing Path in a Matrix](algorithms/329) | Medium |
 | 337 | [House Robber III](algorithms/337) | Medium |
