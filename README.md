@@ -153,6 +153,7 @@
 | 633 | [Sum of Square Numbers](algorithms/633) | Easy |
 | 637 | [Average of Levels in Binary Tree](algorithms/637) | Easy |
 | 645 | [Set Mismatch](algorithms/645) | Easy |
+| 647 | [Palindromic Substrings](algorithms/647) | Medium |
 | 684 | [Redundant Connection](algorithms/684) | Medium |
 | 685 | [Redundant Connection II](algorithms/685) | Hard |
 | 690 | [Employee Importance](algorithms/690) | Easy |
