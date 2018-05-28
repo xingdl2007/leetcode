@@ -149,6 +149,7 @@
 | 581 | [Shortest Unsorted Continuous Subarray](algorithms/581) | Easy |
 | 599 | [Minimum Index Sum of Two Lists](algorithms/599) | Easy |
 | 617 | [Merge Two Binary Trees](algorithms/617) | Easy |
+| 621 | [Task Scheduler](algorithms/621) | Medium |
 | 633 | [Sum of Square Numbers](algorithms/633) | Easy |
 | 637 | [Average of Levels in Binary Tree](algorithms/637) | Easy |
 | 645 | [Set Mismatch](algorithms/645) | Easy |
