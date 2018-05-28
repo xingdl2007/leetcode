@@ -18,7 +18,7 @@ public:
     if (s.empty())
       return "";
     pair<int, int> pos{0, 1};
-    for (int i = 0; i < s.size(); ++i) {
+    for (int i = 0; i < s.size() - 1; ++i) {
       for (int j = i; j <= i + 1; ++j) {
         if (s[i] != s[j])
           break;
