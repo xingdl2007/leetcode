@@ -3,38 +3,53 @@
 
 using namespace std;
 
+// faster: about 13ms
 class Solution {
 public:
   // around the center of Palindrom, extend from either side
-  string extend(string s, int left, int right) {
-    int l = left, r = right;
-    int length = s.size();
-
-    while (l >= 0 && r <= length - 1 && s[l] == s[r]) {
+  pair<int, int> extend(const string &s, int l, int r) {
+    while (l >= 0 && r < s.size() && s[l] == s[r]) {
       l--;
       r++;
     }
-    return s.substr(l + 1, r - l - 1);
+    return {l + 1, r - l - 1};
   }
-
   string longestPalindrome(string s) {
-    int size = s.size();
-    string ret = s.substr(0, 1);
-
-    if (size == 0)
+    if (s.empty())
       return "";
-
-    for (int i = 0; i < size; ++i) {
-      string find = extend(s, i, i);
-      if (find.size() > ret.size())
-        ret = find;
-
-      find = extend(s, i, i + 1);
-      if (find.size() > ret.size())
-        ret = find;
+    pair<int, int> pos{0, 1};
+    for (int i = 0; i < s.size(); ++i) {
+      for (int j = i; j <= i + 1; ++j) {
+        if (s[i] != s[j])
+          break;
+        auto found = extend(s, i, j);
+        if (found.second > pos.second) {
+          pos = found;
+        }
+      }
     }
+    return s.substr(pos.first, pos.second);
+  }
+};
 
-    return ret;
+// DP and elegant, but not very fast
+class Solution2 {
+public:
+  string longestPalindrome(string s) {
+    if (s.empty())
+      return s;
+    auto n = s.size();
+    int palindrome[n][n], begin = n, end = 0;
+    for (int e = 0; e < n; ++e) {
+      for (int b = 0; b <= e; ++b) {
+        palindrome[b][e] = s[b] == s[e] && (e - b < 3 || palindrome[b + 1][e - 1]);
+        if (palindrome[b][e] && e - b > end - begin) {
+          begin = b;
+          end = e;
+        }
+      }
+    }
+    return s.substr(begin, end - begin + 1);
   }
 };
 
