@@ -28,8 +28,7 @@ public:
         } else {
           if (mid == nums.size() || nums[mid + 1] != target) {
             right = mid;
-            low = 0;
-            high = right - 1;
+            break;
           } else
             low = mid + 1;
         }
