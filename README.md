@@ -88,6 +88,7 @@
 | 142 | [Linked List Cycle II](algorithms/142) | Medium |
 | 146 | [LRU Cache](algorithms/146)| Hard |
 | 148 | [Sort List](algorithms/148) | Medium |
+| 153 | [Find Minimum in Rotated Sorted Array](algorithms/153) | Medium |
 | 155 | [Min Stack](algorithms/155) | Easy |
 | 152 | [Maximum Product Subarray](algorithms/152) | Medium |
 | 160 | [Intersection of Two Linked Lists](algorithms/160) | Easy |
@@ -122,6 +123,7 @@
 | 303 | [Range Sum Query - Immutable](algorithms/303) | Easy |
 | 309 | [Best Time to Buy and Sell Stock with Cooldown](algorithms/309) | Medium |
 | 310 | [Minimum Height Trees](algorithms/310) | Medium |
+| 312 | [Burst Balloons](algorithms/312) | Hard |
 | 315 | [Count of Smaller Numbers After Self](algorithms/315) | Hard |
 | 322 | [Coin Change](algorithms/322) | Medium |
 | 329 | [Longest Increasing Path in a Matrix](algorithms/329) | Medium |
