@@ -89,6 +89,7 @@
 | 146 | [LRU Cache](algorithms/146)| Hard |
 | 148 | [Sort List](algorithms/148) | Medium |
 | 153 | [Find Minimum in Rotated Sorted Array](algorithms/153) | Medium |
+| 154 | [Find Minimum in Rotated Sorted Array II](algorithms/154) | Medium |
 | 155 | [Min Stack](algorithms/155) | Easy |
 | 152 | [Maximum Product Subarray](algorithms/152) | Medium |
 | 160 | [Intersection of Two Linked Lists](algorithms/160) | Easy |
