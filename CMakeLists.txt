@@ -2,4 +2,4 @@ cmake_minimum_required(VERSION 3.9)
 set(CMAKE_CXX_STANDARD 11)
 
 add_subdirectory(algorithms)
-add_subdirectory(interview)
+# add_subdirectory(interview)

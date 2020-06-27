@@ -1,11 +1,11 @@
-//simple unit test
+// simple unit test
+#include <iostream>
 #include <map>
 #include <vector>
-#include <iostream>
 
 using namespace std;
 
-//hashmap solution ref Hao chen
+// hashmap solution ref Hao chen
 class Solution {
 public:
   vector<int> twoSum(vector<int> &nums, int target) {
@@ -21,6 +21,7 @@ public:
         return indexs;
       }
     }
+    return {};
   }
 };
 
@@ -35,7 +36,7 @@ int main(int argc, char *argv[]) {
   int numbers[] = {2, 7, 11, 15};
   int target = 9;
 
-  vector<int> nums(numbers, numbers + sizeof(numbers)/sizeof(int));
+  vector<int> nums(numbers, numbers + sizeof(numbers) / sizeof(int));
   vector<int> indexs = (new Solution())->twoSum(nums, target);
 
   vector_dump(nums);

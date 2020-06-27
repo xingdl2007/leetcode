@@ -1,9 +1,9 @@
-#include <iostream>
-#include <vector>
-#include <unordered_map>
-#include <functional>
 #include <algorithm>
 #include <bitset>
+#include <functional>
+#include <iostream>
+#include <unordered_map>
+#include <vector>
 
 using namespace std;
 
@@ -50,18 +50,19 @@ public:
 // for debug
 ostream &operator<<(ostream &out, const Interval &i) {
   out << "[" << i.start << "," << i.end << "]";
+  return out;
 }
 
 auto print = [](const auto &array) {
-  std::for_each(std::begin(array), std::end(array), [](auto s) {
-    cout << s << " ";
-  });
+  std::for_each(std::begin(array), std::end(array),
+                [](auto s) { cout << s << " "; });
   cout << '\n';
 };
 
 int main(int argc, char *argv[]) {
   Solution so;
-  vector<Interval> data = {Interval(1, 3), Interval(2, 6), Interval(8, 10), Interval(15, 18)};
+  vector<Interval> data = {Interval(1, 3), Interval(2, 6), Interval(8, 10),
+                           Interval(15, 18)};
   std::random_shuffle(data.begin(), data.end());
   print(so.merge(data));
 
@@ -69,8 +70,9 @@ int main(int argc, char *argv[]) {
   std::random_shuffle(data2.begin(), data2.end());
   print(so.merge(data2));
 
-  vector<Interval> data3 = {Interval(1, 2), Interval(2, 3), Interval(3, 4), Interval(4, 5),
-                            Interval(5, 6), Interval(2, 3), Interval(7, 8), Interval(9, 10), Interval(5, 9)};
+  vector<Interval> data3 = {Interval(1, 2), Interval(2, 3),  Interval(3, 4),
+                            Interval(4, 5), Interval(5, 6),  Interval(2, 3),
+                            Interval(7, 8), Interval(9, 10), Interval(5, 9)};
   std::random_shuffle(data3.begin(), data3.end());
   print(so.merge(data3));
   return 0;
