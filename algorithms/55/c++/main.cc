@@ -1,9 +1,9 @@
-#include <iostream>
-#include <vector>
-#include <unordered_map>
-#include <functional>
 #include <algorithm>
 #include <bitset>
+#include <functional>
+#include <iostream>
+#include <unordered_map>
+#include <vector>
 
 using namespace std;
 
@@ -40,18 +40,21 @@ public:
 };
 
 auto print = [](const auto &array) {
-  std::for_each(std::begin(array), std::end(array), [](string s) {
-    cout << s << " ";
-  });
+  std::for_each(std::begin(array), std::end(array),
+                [](string s) { cout << s << " "; });
   cout << '\n';
 };
 
 int main(int argc, char *argv[]) {
   Solution2 so;
+  Solution2 so2;
   vector<int> data{2, 3, 1, 1, 4};
-  cout << so.canJump(data) << '\n';
+  cout << so.canJump(data) << " " << so2.canJump(data) << '\n';
 
   vector<int> data2{3, 2, 1, 0, 4};
-  cout << so.canJump(data2) << '\n';
+  cout << so.canJump(data2) << " " << so2.canJump(data2) << '\n';
+
+  vector<int> data3{3, 2, 1, 0};
+  cout << so.canJump(data3) << " " << so2.canJump(data3) << '\n';
   return 0;
 }
