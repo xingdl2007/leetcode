@@ -25,7 +25,7 @@ int main(int argc, char *argv[]) {
   }
 
   {
-    vector<int> prices{1, 2, 3, 4, 5};
+    vector<int> prices{1, 2, 0, 4, 5};
     std::cout << so.maxProfit(prices) << std::endl;
   }
 
