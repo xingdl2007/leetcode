@@ -1,8 +1,8 @@
 package main
 
 import (
-	"math"
 	"fmt"
+	"math"
 )
 
 // Given an integer matrix, find the length of the longest increasing path.
@@ -84,7 +84,7 @@ func main() {
 	}
 	fmt.Println(longestIncreasingPath(matrix))
 
-	matrix = [][]int{{3, 4, 5}, {3, 2, 6}, {2, 2, 1},}
+	matrix = [][]int{{3, 4, 5}, {3, 2, 6}, {2, 2, 1}}
 	fmt.Println(longestIncreasingPath(matrix))
 
 	matrix = [][]int{

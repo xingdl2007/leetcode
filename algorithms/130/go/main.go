@@ -117,7 +117,7 @@ func dfs2(board [][]byte, seen map[int]bool, i, j int) (bool, []int) {
 	return found, region
 }
 
-// fastest
+// fastest: clever!
 func solve3(board [][]byte) {
 	if len(board) == 0 {
 		return
